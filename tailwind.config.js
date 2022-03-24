@@ -1,0 +1,62 @@
+module.exports = {
+    purge: [
+        './pages/**/*.{js,ts,jsx,tsx}',
+        './components/**/*.{js,ts,jsx,tsx}',
+        './layouts/**/*.{js,ts,jsx,tsx}',
+        './modals/**/*.{js,ts,jsx,tsx}',
+    ],
+    darkMode: false, // or 'media' or 'class'
+    theme: {
+        extend: {
+            screens: {
+                xs: { max: '400px' },
+                '2xs': { min: '401px', max: '639px' },
+                sm: { min: '640px', max: '767px' },
+                md: { min: '768px', max: '1023px' },
+                lg: { min: '1024px', max: '1279px' },
+            },
+            colors: {
+                'primary-blue': 'var(--primary-blue)',
+                'secondary-blue': 'var(--secondary-blue)',
+                'tertiary-blue': 'var(--tertiary-blue)',
+                'fainth-blue': 'var(--fainth-blue)',
+                'new-blue': 'var(--new-blue)',
+                'new-purple': 'var(--purple)',
+                'dashboard-main': 'var(--dashboard-main)',
+                highlight: 'var(--highlight)',
+                'highlight-side': 'var(--highlight-side)',
+                'error-red': 'var(--error-red)',
+                'light-gray': 'var(--light-gray)',
+                'dark-gray': 'var(--dark-gray)',
+                'primary-red': 'var(--primary-red)',
+                'secondary-red': 'var(--secondary-red)',
+                'primary-green': 'var(--primary-green)',
+                'secondary-green': 'var(--secondary-green)',
+                'primary-orange': 'var(--primary-orange)',
+                'secondary-orange': 'var(--secondary-orange)',
+                btn: 'var(--navbar-button)',
+                line: 'var(--navbar-line)',
+                ter: 'var(--tertiary-blue-2)',
+                article: 'var(--art-btn)',
+                primary: 'var(--primary-blue)',
+                pink: 'var(--primary-pink)',
+                shade: 'var(--shade-blue)',
+                light: 'var(--light-blue)',
+                deep: 'var(--deep-blue)',
+                shallow: 'var(--shallow-blue)',
+                blue: 'var(--blue)',
+            },
+            fonFamily: {
+                Baloo: ['Baloo'],
+            },
+            width: {
+                'two-card': '48%',
+                scores: '280px',
+            },
+        },
+    },
+    variants: {
+        extend: {},
+    },
+    plugins: [],
+};

@@ -1,0 +1,215 @@
+:root {
+    --primary-blue: #102F55;
+    --secondary-blue: #608EC1;
+    --tertiary-blue: #062040;
+    --tertiary-blue-2: #e5e4f7;
+    --new-blue: #3050B9;
+    --fainth-blue: #EAEDF8;
+    --dashboard-main: #F3F3F3;
+    --highlight: #EBEBEB;
+    --highlight-side: #121212;
+    --error-red: #EA394B;
+    --light-gray: #EDEFF0;
+    --dark-gray: #A6A6A6;
+    --primary-red: #CF2A2A;
+    --secondary-red: #FAEAEA;
+    --primary-green: #07BA18;
+    --secondary-green: #E6F8E8;
+    --primary-orange: #FFAC30;
+    --secondary-orange: #FFF7EA;
+    --navbar-button: #102f55;
+    --navbar-line: #608ec1;
+    --art-btn: #062040;
+    --primary-pink: #dfdef6;
+    --shade-blue: #ecf0fe;
+    --light-blue: #d4e8ff;
+    --deep-blue: #102f55;
+    --shallow-blue: #dffbf8;
+    --blue: #ddedff;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    @font-face {
+        font-family: Baloo;
+        src: url(/fonts/Baloo2-Regular.ttf);
+    }
+
+    body {
+        font-family: Baloo;
+    }
+
+    ::-webkit-scrollbar {
+        width: 10px;
+    }
+
+    ::-webkit-scrollbar-track {
+        background-color: rgb(250, 250, 250);
+        box-shadow: inset 1px 2px #ccc;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        background-color: rgba(0, 0, 0, .4);
+        border-radius: 20rem;
+    }
+}
+
+@layer components {
+    .nav-link {
+        @apply w-full h-12 border-solid hover:border-primary-blue border-l-2 flex items-center px-4 text-primary-blue;
+    }
+
+    .nav-link:hover {
+        @apply bg-dashboard-main font-semibold;
+    }
+
+    .nav-link img {
+        @apply w-6 h-6 mr-3;
+    }
+
+    .admin-user:hover {
+        @apply bg-transparent font-medium border-transparent;
+    }
+
+    .article__container {
+        @apply flex flex-col mb-8 px-4 py-2 shadow-sm rounded-sm border-solid border-dashboard-main border-2;
+        width: 30%;
+        height: 17rem;
+        margin-right: 5%;
+    }
+
+    .article__container:nth-child(3n + 0) {
+        margin-right: 0;
+    }
+
+    .summary-card {
+        @apply rounded-sm bg-white border-solid border-dashboard-main border-2 shadow-sm h-72 px-6 py-4 mb-10 cursor-pointer;
+        margin-right: 6%;
+    }
+
+    .summary-card:nth-child(2n + 0) {
+        margin-right: 0;
+    }
+
+    .criteria-card { margin-right: 5% }
+
+    .criteria-card:nth-child(3n + 0) { margin-right: 0 }
+
+    .wrapper__class {
+        width: 100%;
+        border: solid 2px var(--dashboard-main);
+        margin-top: 1.7rem;
+    }
+
+    .editor__class {
+        padding: 0 1rem;
+        padding-top: .2rem;
+        height: 25rem;
+        overflow-y: auto;
+    }
+
+    .article__card {
+        @apply px-4 bg-white border-solid border-2 border-white ml-2 rounded-md;
+        width: 30%;
+        box-shadow: 1px 1px 4px #ccc;
+    }
+
+    .article__card:nth-child(3n + 0) {
+        margin-right: 0;
+    }
+
+    .profile__card {
+        @apply bg-white border-solid border-2 border-white rounded-sm mx-16;
+        width: 22%;
+        box-shadow: 1px 1px 3px #ccc;
+    }
+
+    .profile__box {
+        width: 90%;
+        box-shadow: 1px 1px 4px #ccc;
+    }
+
+    .change {
+        opacity: 1;
+    }
+
+    .slider {
+        height: 90vh;
+    }
+
+    .control-dots {
+        display: flex;
+        justify-content: center;
+    }
+
+    .slide {
+        background-color: white;
+        min-width: 0;
+    }
+
+    .loading {
+        width: 7rem;
+        height: 7rem;
+        border: 10px solid #E1E1E1;
+        border-top: 10px solid #102F55;
+        border-radius: 50%;
+        animation: spin 1s linear infinite;
+    }
+
+    @keyframes spin {
+        0% {
+            transform: rotate(0deg);
+        }
+
+        100% {
+            transform: rotate(360deg);
+        }
+    }
+}
+
+@layer utilities {
+    .modal-top {
+        background-color: rgba(0, 0, 0, 0.6);
+        left: 0;
+        transition: all 0.7s ease-in-out;
+    }
+
+    .modal-left {
+        @apply w-full h-full absolute top-0 z-10 lg:hidden xl:hidden;
+        transition: all 0.7s ease-in-out;
+    }
+
+    .scores-top {
+        left: 0;
+        transition: all 0.7s ease-in-out;
+    }
+
+    .centralise {
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .two-card {
+        width: 47%;
+    }  
+
+    .three-card {
+        width: 30%;
+    }
+
+    .four-card {
+        width: 22%;
+    }
+
+    .btn-blue:hover {
+        @apply text-primary-blue bg-white border-solid border-primary-blue border-2;
+    }
+
+    .error {
+        @apply text-xs text-red-500 text-left ml-1;
+    }
+}
